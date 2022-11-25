@@ -72,6 +72,25 @@ header .profile{
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+    animation: changeBorderColor 6s linear infinite;
+    -webkit-animation: changeBorderColor 6s linear infinite;
+}
+@keyframes changeBorderColor{
+    0%{
+        border: 3px solid white;
+    }
+    25%{
+        border: 3px solid var(--work-bg);
+    }
+    50%{
+        border: 3px solid var(--study-bg);
+    }
+    75%{
+        border: 3px solid var(--self-care-bg);
+    }
+    100%{
+        border: 3px solid white;
+    }
 }
 .profile__text h1{
     color: white;
@@ -99,14 +118,16 @@ header .profile{
 main .card{
     background: url(./images/icon-work.svg) no-repeat var(--work-bg);
     background-position: top -.5rem right 1rem;
+    display: flex;
+    align-items: flex-end;
     border-radius: 1rem;
     -webkit-border-radius: 1rem;
     -moz-border-radius: 1rem;
     -ms-border-radius: 1rem;
     -o-border-radius: 1rem;
     overflow: hidden;
-    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.3);
     padding-top: 3rem;
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.3);
     animation: moveBg 5s linear infinite;
     -webkit-animation: moveBg 3s linear infinite;
 }
@@ -142,6 +163,7 @@ main .card{
     background-position: top -.5rem right 1rem;
 }
 .card .details{
+    width: 100%;
     background: var(--card-bg);
     display: grid;
     gap: .5rem;
@@ -175,4 +197,46 @@ footer a{
 }
 footer a:hover{
     text-decoration: none;
+}
+@media(min-width: 1000px){
+    .container{
+        grid-template-columns: minmax(auto, 250px) auto;
+    }
+    .container header{
+        display: grid;
+        grid-template-rows: 1fr auto;
+    }
+    header .profile,
+    .nav,
+    .details__time{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    header .profile{
+        gap: 2rem;
+    }
+    .profile img{
+        width: 5rem;
+        height: 5rem;
+    }
+    .profile__text h1{
+        font-size: 2.75rem;
+    }
+    .nav{
+        gap: 1rem;
+    }
+    .container main{
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
+    }
+    .card .details{
+        gap: 1rem;
+    }
+}
+@media(min-width: 1200px){
+    .container main{
+        grid-template-columns: repeat(3, minmax(250px, 1fr));
+    }
+    .details__time h2{
+        font-size: 3.75rem;
+    }
 }
