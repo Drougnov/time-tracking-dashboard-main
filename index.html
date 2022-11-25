@@ -9,153 +9,100 @@
   <title>Frontend Mentor | Time tracking dashboard</title>
 </head>
 <body>
-  <header>
-    <div class="profile">
-      <img src="./images/image-jeremy.png" alt="Jeremy">
-      <section>
-        <p>Report for</p>
-        <h1>Jeremy Robson</h1>
-      </section>
-    </div>
-    <div>
-      <button type="button">Daily</button>
-      <button type="button">Weekly</button>
-      <button type="button">Monthly</button>
-    </div>
-  </header>
-  <main>
-    <div class="card">
-      <div class="details">
-        <section class="title">
-          <h3 class="title__name"></h3>
-          
-        </section>
-        <section class="time">
-          <h2 class="time__curr">hrs</h2>
-          <p class="time__prev">Last week - hrs</p>
+  <div class="container">
+    <header>
+      <div class="profile">
+        <img src="./images/image-jeremy.png" alt="Jeremy">
+        <section class="profile__text">
+          <p>Report for</p>
+          <h1>Jeremy Robson</h1>
         </section>
       </div>
-    </div>
-    <div class="card">
-      <div class="details">
-        <section class="title">
-          <h3 class="title__name"></h3>
-          
-        </section>
-        <section class="time">
-          <h2 class="time__curr">hrs</h2>
-          <p class="time__prev">Last week - hrs</p>
-        </section>
+      <div class="nav">
+        <button type="button">Daily</button>
+        <button type="button">Weekly</button>
+        <button type="button">Monthly</button>
       </div>
-    </div>
-    <div class="card">
-      <div class="details">
-        <section class="title">
-          <h3 class="title__name"></h3>
-          
-        </section>
-        <section class="time">
-          <h2 class="time__curr">hrs</h2>
-          <p class="time__prev">Last week - hrs</p>
-        </section>
+    </header>
+    <main>
+      <div class="card">
+        <div class="details">
+          <section class="details__title">
+            <h3 class="details__title--name">Work</h3>
+            <i class="fa-solid fa-ellipsis"></i>
+          </section>
+          <section class="details__time">
+            <h2 class="details__time--curr">32hrs</h2>
+            <p class="details__time--prev">Last week - 36hrs</p>
+          </section>
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <div class="details">
-        <section class="title">
-          <h3 class="title__name"></h3>
-          
-        </section>
-        <section class="time">
-          <h2 class="time__curr">hrs</h2>
-          <p class="time__prev">Last week - hrs</p>
-        </section>
+      <div class="card">
+        <div class="details">
+          <section class="details__title">
+            <h3 class="details__title--name">Play</h3>
+            <i class="fa-solid fa-ellipsis"></i>
+          </section>
+          <section class="details__time">
+            <h2 class="details__time--curr">10hrs</h2>
+            <p class="details__time--prev">Last week - 8hrs</p>
+          </section>
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <div class="details">
-        <section class="title">
-          <h3 class="title__name"></h3>
-          
-        </section>
-        <section class="time">
-          <h2 class="time__curr">hrs</h2>
-          <p class="time__prev">Last week - hrs</p>
-        </section>
+      <div class="card">
+        <div class="details">
+          <section class="details__title">
+            <h3 class="details__title--name">Study</h3>
+            <i class="fa-solid fa-ellipsis"></i>
+          </section>
+          <section class="details__time">
+            <h2 class="details__time--curr">4hrs</h2>
+            <p class="details__time--prev">Last week - 7hrs</p>
+          </section>
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <div class="details">
-        <section class="title">
-          <h3 class="title__name"></h3>
-          
-        </section>
-        <section class="time">
-          <h2 class="time__curr">hrs</h2>
-          <p class="time__prev">Last week - hrs</p>
-        </section>
+      <div class="card">
+        <div class="details">
+          <section class="details__title">
+            <h3 class="details__title--name">Exercise</h3>
+            <i class="fa-solid fa-ellipsis"></i>
+          </section>
+          <section class="details__time">
+            <h2 class="details__time--curr">4hrs</h2>
+            <p class="details__time--prev">Last week - 5hrs</p>
+          </section>
+        </div>
       </div>
-    </div>
-  </main>
-  Report for
-  Jeremy Robson
-
-  Daily
-  Weekly
-  Monthly
-
-  Work
-  5hrs <!-- daily -->
-  Previous - 7hrs <!-- daily -->
-  32hrs <!-- weekly -->
-  Previous - 36hrs <!-- weekly -->
-  103hrs <!-- monthly -->
-  Previous - 128hrs <!-- monthly -->
-
-  Play
-  1hr <!-- daily -->
-  Previous - 2hrs <!-- daily -->
-  10hrs <!-- weekly -->
-  Previous - 8hrs <!-- weekly -->
-  23hrs <!-- monthly -->
-  Previous - 29hrs <!-- monthly -->
-
-  Study
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 7hrs <!-- weekly -->
-  13hrs <!-- monthly -->
-  Previous - 19hrs <!-- monthly -->
-
-  Exercise
-  1hr <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  4hrs <!-- weekly -->
-  Previous - 5hrs <!-- weekly -->
-  11hrs <!-- monthly -->
-  Previous - 18hrs <!-- monthly -->
-
-  Social
-  1hr <!-- daily -->
-  Previous - 3hrs <!-- daily -->
-  5hrs <!-- weekly -->
-  Previous - 10hrs <!-- weekly -->
-  21hrs <!-- monthly -->
-  Previous - 23hrs <!-- monthly -->
-
-  Self Care
-  0hrs <!-- daily -->
-  Previous - 1hr <!-- daily -->
-  2hrs <!-- weekly -->
-  Previous - 2hrs <!-- weekly -->
-  7hrs <!-- monthly -->
-  Previous - 11hrs <!-- monthly -->
-
-  <script src="app.js"></script>
+      <div class="card">
+        <div class="details">
+          <section class="details__title">
+            <h3 class="details__title--name">Social</h3>
+            <i class="fa-solid fa-ellipsis"></i>
+          </section>
+          <section class="details__time">
+            <h2 class="details__time--curr">5hrs</h2>
+            <p class="details__time--prev">Last week - 10hrs</p>
+          </section>
+        </div>
+      </div>
+      <div class="card">
+        <div class="details">
+          <section class="details__title">
+            <h3 class="details__title--name">Self Care</h3>
+            <i class="fa-solid fa-ellipsis"></i>
+          </section>
+          <section class="details__time">
+            <h2 class="details__time--curr">2hrs</h2>
+            <p class="details__time--prev">Last week - 2hrs</p>
+          </section>
+        </div>
+      </div>
+    </main>
+  </div>
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener">Frontend Mentor</a>. 
     Coded by <a href="https://twitter.com/itz_rocky_barua">Rocky</a>.
   </footer>
+  <script src="app.js"></script>
 </body>
 </html>
