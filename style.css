@@ -18,9 +18,24 @@
     --card-bg: hsl(235, 46%, 20%);
     --nav-text: hsl(235, 45%, 61%);
     --primary-text: hsl(236, 100%, 87%);
+    --white: hsl(0, 0%, 100%);
+}
+:root .light-mode{
+    --profile-bg: hsl(246, 80%, 60%);
+    --work-bg: hsl(15, 100%, 70%);
+    --play-bg: hsl(195, 74%, 62%);
+    --study-bg: hsl(348, 100%, 68%);
+    --exercise-bg: hsl(145, 58%, 55%);
+    --social-bg: hsl(264, 64%, 52%);
+    --self-care-bg: hsl(43, 84%, 65%);
+    --main-bg: hsl(226, 43%, 90%);
+    --card-bg: hsla(235, 46%, 80%,.5);
+    --nav-text: hsl(235, 45%, 31%);
+    --primary-text: hsl(236, 100%, 17%);
+    --white: hsl(0, 0%, 5%);
 }
 h1,h2,h3{
-    color: white;
+    color: var(--white);
     font-weight: 300;
 }
 body{
@@ -33,6 +48,11 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
 }
 .container{
     display: grid;
@@ -40,6 +60,37 @@ body{
     justify-content: center;
     gap: 1.5rem;
     padding: 5rem 1.5rem;
+    position: relative;
+}
+.container .toggle-container{
+    position: absolute;
+    top: 0;
+    right: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.toggle-container .toggle{
+    width: 3rem;
+    height: 1.5rem;
+    background: var(--profile-bg);
+    border-radius: 1rem;
+    position: relative;
+    cursor: pointer;
+}
+.toggle .slider{
+    position: absolute;
+    content: '';
+    top: .15rem;
+    right: .15rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    background: white;
+    border-radius: 50%;
+}
+.active .slider{
+    left: .15rem;
+    margin-right: auto;
 }
 .container header{
     background: var(--card-bg);
@@ -66,7 +117,7 @@ header .profile{
 .profile img{
     width: 4rem;
     height: 4rem;
-    border: 3px solid white;
+    border: 3px solid var(--white);
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -77,7 +128,7 @@ header .profile{
 }
 @keyframes changeBorderColor{
     0%{
-        border: 3px solid white;
+        border: 3px solid var(--white);
     }
     25%{
         border: 3px solid var(--work-bg);
@@ -89,7 +140,7 @@ header .profile{
         border: 3px solid var(--self-care-bg);
     }
     100%{
-        border: 3px solid white;
+        border: 3px solid var(--white);
     }
 }
 .profile__text h1{
