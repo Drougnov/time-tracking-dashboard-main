@@ -6,6 +6,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+  <script src="app.js" defer></script>
   <title>Frontend Mentor | Time tracking dashboard</title>
 </head>
 <body>
@@ -26,90 +27,17 @@
         </section>
       </div>
       <div class="nav">
-        <button type="button">Daily</button>
-        <button type="button">Weekly</button>
-        <button type="button">Monthly</button>
+        <button type="button" class="btn daily-btn">Daily</button>
+        <button type="button" class="btn weekly-btn active">Weekly</button>
+        <button type="button" class="btn monthly-btn">Monthly</button>
       </div>
     </header>
     <main>
-      <div class="card">
-        <div class="details">
-          <section class="details__title">
-            <h3>Work</h3>
-            <i class="fa-solid fa-ellipsis"></i>
-          </section>
-          <section class="details__time">
-            <h2>32hrs</h2>
-            <p>Last week - 36hrs</p>
-          </section>
-        </div>
-      </div>
-      <div class="card">
-        <div class="details">
-          <section class="details__title">
-            <h3>Play</h3>
-            <i class="fa-solid fa-ellipsis"></i>
-          </section>
-          <section class="details__time">
-            <h2>10hrs</h2>
-            <p>Last week - 8hrs</p>
-          </section>
-        </div>
-      </div>
-      <div class="card">
-        <div class="details">
-          <section class="details__title">
-            <h3>Study</h3>
-            <i class="fa-solid fa-ellipsis"></i>
-          </section>
-          <section class="details__time">
-            <h2>4hrs</h2>
-            <p>Last week - 7hrs</p>
-          </section>
-        </div>
-      </div>
-      <div class="card">
-        <div class="details">
-          <section class="details__title">
-            <h3>Exercise</h3>
-            <i class="fa-solid fa-ellipsis"></i>
-          </section>
-          <section class="details__time">
-            <h2>4hrs</h2>
-            <p>Last week - 5hrs</p>
-          </section>
-        </div>
-      </div>
-      <div class="card">
-        <div class="details">
-          <section class="details__title">
-            <h3>Social</h3>
-            <i class="fa-solid fa-ellipsis"></i>
-          </section>
-          <section class="details__time">
-            <h2>5hrs</h2>
-            <p>Last week - 10hrs</p>
-          </section>
-        </div>
-      </div>
-      <div class="card">
-        <div class="details">
-          <section class="details__title">
-            <h3>Self Care</h3>
-            <i class="fa-solid fa-ellipsis"></i>
-          </section>
-          <section class="details__time">
-            <h2>2hrs</h2>
-            <p>Last week - 2hrs</p>
-          </section>
-        </div>
-      </div>
     </main>
   </div>
   <footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" rel="noopener">Frontend Mentor</a>. 
     Coded by <a href="https://twitter.com/itz_rocky_barua">Rocky</a>.
   </footer>
-  <script src="app.js"></script>
 </body>
 </html>
