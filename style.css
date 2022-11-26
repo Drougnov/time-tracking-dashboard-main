@@ -16,6 +16,7 @@
     --self-care-bg: hsl(43, 84%, 65%);
     --main-bg: hsl(226, 43%, 10%);
     --card-bg: hsl(235, 46%, 20%);
+    --card-hover-bg: hsl(235, 46%, 25%);
     --nav-text: hsl(235, 45%, 61%);
     --primary-text: hsl(236, 100%, 87%);
     --white: hsl(0, 0%, 100%);
@@ -30,6 +31,7 @@
     --self-care-bg: hsl(43, 84%, 65%);
     --main-bg: hsl(226, 43%, 90%);
     --card-bg: hsla(235, 46%, 80%,.5);
+    --card-hover-bg: hsla(235, 46%, 85%, .7);
     --nav-text: hsl(235, 45%, 31%);
     --primary-text: hsl(236, 100%, 17%);
     --white: hsl(0, 0%, 5%);
@@ -101,6 +103,26 @@ body{
     -o-border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.3);
+    animation: fadeFromLeft .3s linear forwards;
+    -webkit-animation: fadeFromLeft .3s linear forwards;
+}
+@keyframes fadeFromLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        -moz-transform: translateX(-100%);
+        -ms-transform: translateX(-100%);
+        -o-transform: translateX(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        -o-transform: translateX(0);
+    }
 }
 header .profile{
     display: flex;
@@ -159,7 +181,14 @@ header .profile{
     font-size: 1.125rem;
     font-family: 'Rubik', sans-serif;
     border: none;
+    cursor: pointer;
+    transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -ms-transition: all .2s linear;
+    -o-transition: all .2s linear;
 }
+button:hover,
 button.active{
     color: var(--white);
 }
@@ -168,6 +197,34 @@ button.active{
     grid-template-columns: minmax(auto, 425px);
     justify-content: center;
     gap: 1.5rem;
+    animation: fadeFromRight .7s linear forwards;
+    -webkit-animation: fadeFromRight .7s linear forwards;
+}
+@keyframes fadeFromRight{
+    0%{
+        opacity: 0;
+        transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
+    }
+    70%{
+        opacity: 0;
+        transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
+        -moz-transform: translateY(-100%);
+        -ms-transform: translateY(-100%);
+        -o-transform: translateY(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+    }
 }
 main .card{
     background: url(./images/icon-work.svg) no-repeat var(--work-bg);
@@ -218,7 +275,9 @@ main .card{
 }
 .card .details{
     width: 100%;
+    color: var(--primary-text);
     background: var(--card-bg);
+    text-decoration: none;
     display: grid;
     gap: .5rem;
     border-radius: 1rem;
@@ -227,6 +286,14 @@ main .card{
     -ms-border-radius: 1rem;
     -o-border-radius: 1rem;
     padding: 1.5rem;
+    transition: all .2s linear;
+    -webkit-transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -ms-transition: all .2s linear;
+    -o-transition: all .2s linear;
+}
+.card .details:hover{
+    background: var(--card-hover-bg);
 }
 .details__title,
 .details__time{
