@@ -50,11 +50,11 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: all .3s linear;
     -webkit-transition: all .3s linear;
     -moz-transition: all .3s linear;
     -ms-transition: all .3s linear;
     -o-transition: all .3s linear;
+    transition: all .3s linear;
 }
 .container{
     display: grid;
@@ -96,32 +96,32 @@ body{
 }
 .container header{
     background: var(--card-bg);
-    border-radius: 1rem;
     -webkit-border-radius: 1rem;
     -moz-border-radius: 1rem;
     -ms-border-radius: 1rem;
     -o-border-radius: 1rem;
+    border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.3);
-    animation: fadeFromLeft .3s linear forwards;
     -webkit-animation: fadeFromLeft .3s linear forwards;
+    animation: fadeFromLeft .3s linear forwards;
 }
 @keyframes fadeFromLeft{
     0%{
         opacity: 0;
-        transform: translateX(-100%);
         -webkit-transform: translateX(-100%);
         -moz-transform: translateX(-100%);
         -ms-transform: translateX(-100%);
         -o-transform: translateX(-100%);
+        transform: translateX(-100%);
     }
     100%{
         opacity: 1;
-        transform: translateX(0);
         -webkit-transform: translateX(0);
         -moz-transform: translateX(0);
         -ms-transform: translateX(0);
         -o-transform: translateX(0);
+        transform: translateX(0);
     }
 }
 header .profile{
@@ -130,23 +130,23 @@ header .profile{
     gap: 1rem;
     background: var(--profile-bg);
     padding: 2rem;
-    border-radius: 1rem;
     -webkit-border-radius: 1rem;
     -moz-border-radius: 1rem;
     -ms-border-radius: 1rem;
     -o-border-radius: 1rem;
+    border-radius: 1rem;
 }
 .profile img{
     width: 4rem;
     height: 4rem;
     border: 3px solid var(--white);
-    border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    animation: changeBorderColor 6s linear infinite;
+    border-radius: 50%;
     -webkit-animation: changeBorderColor 6s linear infinite;
+    animation: changeBorderColor 6s linear infinite;
 }
 @keyframes changeBorderColor{
     0%{
@@ -182,11 +182,11 @@ header .profile{
     font-family: 'Rubik', sans-serif;
     border: none;
     cursor: pointer;
-    transition: all .2s linear;
     -webkit-transition: all .2s linear;
     -moz-transition: all .2s linear;
     -ms-transition: all .2s linear;
     -o-transition: all .2s linear;
+    transition: all .2s linear;
 }
 button:hover,
 button.active{
@@ -197,33 +197,33 @@ button.active{
     grid-template-columns: minmax(auto, 425px);
     justify-content: center;
     gap: 1.5rem;
-    animation: fadeFromRight .7s linear forwards;
     -webkit-animation: fadeFromRight .7s linear forwards;
+    animation: fadeFromRight .7s linear forwards;
 }
 @keyframes fadeFromRight{
     0%{
         opacity: 0;
-        transform: translateY(-100%);
         -webkit-transform: translateY(-100%);
         -moz-transform: translateY(-100%);
         -ms-transform: translateY(-100%);
         -o-transform: translateY(-100%);
+        transform: translateY(-100%);
     }
     70%{
         opacity: 0;
-        transform: translateY(-100%);
         -webkit-transform: translateY(-100%);
         -moz-transform: translateY(-100%);
         -ms-transform: translateY(-100%);
         -o-transform: translateY(-100%);
+        transform: translateY(-100%);
     }
     100%{
         opacity: 1;
-        transform: translateY(0);
         -webkit-transform: translateY(0);
         -moz-transform: translateY(0);
         -ms-transform: translateY(0);
         -o-transform: translateY(0);
+        transform: translateY(0);
     }
 }
 main .card{
@@ -231,16 +231,16 @@ main .card{
     background-position: top -.5rem right 1rem;
     display: flex;
     align-items: flex-end;
-    border-radius: 1rem;
     -webkit-border-radius: 1rem;
     -moz-border-radius: 1rem;
     -ms-border-radius: 1rem;
     -o-border-radius: 1rem;
+    border-radius: 1rem;
     overflow: hidden;
     padding-top: 3rem;
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.3);
-    animation: moveBg 5s linear infinite;
     -webkit-animation: moveBg 3s linear infinite;
+    animation: moveBg 5s linear infinite;
 }
 @keyframes moveBg{
     0%{
@@ -280,17 +280,17 @@ main .card{
     text-decoration: none;
     display: grid;
     gap: .5rem;
-    border-radius: 1rem;
     -webkit-border-radius: 1rem;
     -moz-border-radius: 1rem;
     -ms-border-radius: 1rem;
     -o-border-radius: 1rem;
+    border-radius: 1rem;
     padding: 1.5rem;
-    transition: all .2s linear;
     -webkit-transition: all .2s linear;
     -moz-transition: all .2s linear;
     -ms-transition: all .2s linear;
     -o-transition: all .2s linear;
+    transition: all .2s linear;
 }
 .card .details:hover{
     background: var(--card-hover-bg);
