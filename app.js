@@ -5,15 +5,13 @@ toggle.addEventListener('click',()=>{
     toggle.classList.toggle('active');
 })
 
-function currentBtn(){
-    const btns = document.querySelectorAll('.btn');
-    btns.forEach(btn=>{
-        btn.classList.remove('active');
-        btn.addEventListener('click',(e)=>{
-            e.target.classList.add('active');
-        })
+const btns = document.querySelectorAll('.btn');
+btns.forEach(btn=>{
+    btn.addEventListener('click',(e)=>{
+        document.querySelector('.btn.active').classList.remove('active');
+        e.target.classList.add('active');
     })
-}
+})
 
 fetch('./data.json')
     .then(res => res.json())
@@ -31,7 +29,7 @@ fetch('./data.json')
                                 <i class="fa-solid fa-ellipsis"></i>
                             </section>
                             <section class="details__time">
-                                <h2 class="curr" data-val="${data[i].timeframes.daily.current}">${data[i].timeframes.daily.current}hrs</h2>
+                                <h2>${data[i].timeframes.daily.current}hrs</h2>
                                 <p>Yesterday - ${data[i].timeframes.daily.previous}hrs</p>
                             </section>
                         </a>
@@ -49,7 +47,7 @@ fetch('./data.json')
                                 <i class="fa-solid fa-ellipsis"></i>
                             </section>
                             <section class="details__time">
-                                <h2 class="curr" data-val="${data[i].timeframes.weekly.current}">${data[i].timeframes.weekly.current}hrs</h2>
+                                <h2>${data[i].timeframes.weekly.current}hrs</h2>
                                 <p>Last Week - ${data[i].timeframes.weekly.previous}hrs</p>
                             </section>
                         </a>
@@ -67,7 +65,7 @@ fetch('./data.json')
                                 <i class="fa-solid fa-ellipsis"></i>
                             </section>
                             <section class="details__time">
-                                <h2 class="curr" data-val="${data[i].timeframes.monthly.current}">${data[i].timeframes.monthly.current}hrs</h2>
+                                <h2>${data[i].timeframes.monthly.current}hrs</h2>
                                 <p>Last Month - ${data[i].timeframes.monthly.previous}hrs</p>
                             </section>
                         </a>
@@ -80,23 +78,10 @@ fetch('./data.json')
         const dailyBtn = document.querySelector('.daily-btn');
         const weeklyBtn = document.querySelector('.weekly-btn');
         const monthlyBtn = document.querySelector('.monthly-btn');
-        dailyBtn.addEventListener('click', ()=>{getDaily(),currentBtn()});
-        weeklyBtn.addEventListener('click', ()=>{getWeekly(),currentBtn()});
-        monthlyBtn.addEventListener('click', ()=>{getMonthly(),currentBtn()});
+        // dailyBtn.addEventListener('click', ()=>{getDaily(),currentBtn()});
+        // weeklyBtn.addEventListener('click', ()=>{getWeekly(),currentBtn()});
+        // monthlyBtn.addEventListener('click', ()=>{getMonthly(),currentBtn()});
+        dailyBtn.addEventListener('click', getDaily);
+        weeklyBtn.addEventListener('click', getWeekly);
+        monthlyBtn.addEventListener('click', getMonthly);
     });
-
-let valueDisplay = document.querySelectorAll('.curr');
-let interval = 3000;
-
-valueDisplay.forEach(value=>{
-    let startValue = 0;
-    let endValue = parseInt(value.getAttribute('data-val'));
-    let duration = Math.floor(interval / endValue);
-    let counter = setInterval(()=>{
-        startValue++;
-        value.textContent = startValue;
-        if(startValue == endValue){
-            clearInterval(counter);
-        }
-    },duration)
-})
