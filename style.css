@@ -103,8 +103,8 @@ body{
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.3);
-    -webkit-animation: fadeFromLeft .3s linear forwards;
-    animation: fadeFromLeft .3s linear forwards;
+    -webkit-animation: fadeFromLeft .8s linear forwards;
+    animation: fadeFromLeft .8s linear forwards;
 }
 @keyframes fadeFromLeft{
     0%{
@@ -197,34 +197,6 @@ button.active{
     grid-template-columns: minmax(auto, 425px);
     justify-content: center;
     gap: 1.5rem;
-    -webkit-animation: fadeFromRight .7s linear forwards;
-    animation: fadeFromRight .7s linear forwards;
-}
-@keyframes fadeFromRight{
-    0%{
-        opacity: 0;
-        -webkit-transform: translateY(-100%);
-        -moz-transform: translateY(-100%);
-        -ms-transform: translateY(-100%);
-        -o-transform: translateY(-100%);
-        transform: translateY(-100%);
-    }
-    70%{
-        opacity: 0;
-        -webkit-transform: translateY(-100%);
-        -moz-transform: translateY(-100%);
-        -ms-transform: translateY(-100%);
-        -o-transform: translateY(-100%);
-        transform: translateY(-100%);
-    }
-    100%{
-        opacity: 1;
-        -webkit-transform: translateY(0);
-        -moz-transform: translateY(0);
-        -ms-transform: translateY(0);
-        -o-transform: translateY(0);
-        transform: translateY(0);
-    }
 }
 main .card{
     background: url(./images/icon-work.svg) no-repeat var(--work-bg);
