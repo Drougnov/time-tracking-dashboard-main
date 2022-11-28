@@ -28,11 +28,11 @@ fetch('./data.json')
                     <div class="card">
                         <a href="#" class="details">
                             <section class="details__title">
-                                <h3>${data[i].title}</h3>
+                                <h2>${data[i].title}</h2>
                                 <i class="fa-solid fa-ellipsis"></i>
                             </section>
                             <section class="details__time">
-                                <h2 data-num="${data[i].timeframes.daily.current}">${data[i].timeframes.daily.current}hrs</h2>
+                                <h3 data-num="${data[i].timeframes.daily.current}">${data[i].timeframes.daily.current}hrs</h3>
                                 <p>Yesterday - ${data[i].timeframes.daily.previous}hrs</p>
                             </section>
                         </a>
@@ -46,11 +46,11 @@ fetch('./data.json')
                     <div class="card">
                         <a href="#" class="details">
                             <section class="details__title">
-                                <h3>${data[i].title}</h3>
+                                <h2>${data[i].title}</h2>
                                 <i class="fa-solid fa-ellipsis"></i>
                             </section>
                             <section class="details__time">
-                                <h2 data-num="${data[i].timeframes.weekly.current}">${data[i].timeframes.weekly.current}hrs</h2>
+                                <h3 data-num="${data[i].timeframes.weekly.current}">${data[i].timeframes.weekly.current}hrs</h3>
                                 <p>Last Week - ${data[i].timeframes.weekly.previous}hrs</p>
                             </section>
                         </a>
@@ -64,11 +64,11 @@ fetch('./data.json')
                     <div class="card">
                         <a href="#" class="details">
                             <section class="details__title">
-                                <h3>${data[i].title}</h3>
+                                <h2>${data[i].title}</h2>
                                 <i class="fa-solid fa-ellipsis"></i>
                             </section>
                             <section class="details__time">
-                                <h2 data-num="${data[i].timeframes.monthly.current}">${data[i].timeframes.monthly.current}hrs</h2>
+                                <h3 data-num="${data[i].timeframes.monthly.current}">${data[i].timeframes.monthly.current}hrs</h3>
                                 <p>Last Month - ${data[i].timeframes.monthly.previous}hrs</p>
                             </section>
                         </a>
@@ -79,7 +79,7 @@ fetch('./data.json')
         window.addEventListener('load',getWeekly()); //load weekly data by default
 
         //counter animation
-        let numbers = document.querySelectorAll('h2');
+        let numbers = document.querySelectorAll('h3');
         let interval = 1000;
 
         numbers.forEach(num =>{
