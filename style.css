@@ -316,27 +316,27 @@ footer a:hover{
     @keyframes fadeFromLeft {
         0%{
             opacity: 0;
-            transform: translateX(-50px);
             -webkit-transform: translateX(-50px);
             -moz-transform: translateX(-50px);
             -ms-transform: translateX(-50px);
             -o-transform: translateX(-50px);
+            transform: translateX(-50px);
         }
         60%{
             opacity: 0;
-            transform: translateX(-50px);
             -webkit-transform: translateX(-50px);
             -moz-transform: translateX(-50px);
             -ms-transform: translateX(-50px);
             -o-transform: translateX(-50px);
+            transform: translateX(-50px);
         }
         100%{
             opacity: 1;
-            transform: translateX(0);
             -webkit-transform: translateX(0);
             -moz-transform: translateX(0);
             -ms-transform: translateX(0);
             -o-transform: translateX(0);
+            transform: translateX(0);
         }
     }
     header .profile,
