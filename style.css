@@ -64,36 +64,6 @@ body{
     padding: 5rem 1.5rem;
     position: relative;
 }
-.container .toggle-container{
-    position: absolute;
-    top: 1rem;
-    right: 1.5rem;
-    display: flex;
-    align-items: center;
-    gap: .5rem;
-}
-.toggle-container .toggle{
-    width: 3rem;
-    height: 1.5rem;
-    background: var(--profile-bg);
-    border-radius: 1rem;
-    position: relative;
-    cursor: pointer;
-}
-.toggle .slider{
-    position: absolute;
-    content: '';
-    top: .15rem;
-    right: .15rem;
-    width: 1.2rem;
-    height: 1.2rem;
-    background: white;
-    border-radius: 50%;
-}
-.active .slider{
-    left: .15rem;
-    margin-right: auto;
-}
 .container header{
     background: var(--card-bg);
     -webkit-border-radius: 1rem;
@@ -109,19 +79,19 @@ body{
 @keyframes fadeFromLeft{
     0%{
         opacity: 0;
-        -webkit-transform: translateX(-100%);
-        -moz-transform: translateX(-100%);
-        -ms-transform: translateX(-100%);
-        -o-transform: translateX(-100%);
-        transform: translateX(-100%);
+        -webkit-transform: translateY(-50px);
+        -moz-transform: translateY(-50px);
+        -ms-transform: translateY(-50px);
+        -o-transform: translateY(-50px);
+        transform: translateY(-50px);
     }
     100%{
         opacity: 1;
-        -webkit-transform: translateX(0);
-        -moz-transform: translateX(0);
-        -ms-transform: translateX(0);
-        -o-transform: translateX(0);
-        transform: translateX(0);
+        -webkit-transform: translateY(0);
+        -moz-transform: translateY(0);
+        -ms-transform: translateY(0);
+        -o-transform: translateY(0);
+        transform: translateY(0);
     }
 }
 header .profile{
@@ -272,6 +242,7 @@ main .card{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
 }
 .details__title h3{
     font-size: 1.125rem;
@@ -279,6 +250,49 @@ main .card{
 }
 .details__time h2{
     font-size: 2rem;
+}
+.details__time p{
+    text-align: right;
+}
+.container .toggle-container{
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.toggle-container .git-repo{
+    color: var(--primary-text);
+    font-size: 1.5rem;
+    text-decoration: none;
+    margin-right: .5rem;
+    padding-top: .15rem;
+}
+.git-repo:hover{
+    color: var(--profile-bg);
+}
+.toggle-container .toggle{
+    width: 3rem;
+    height: 1.5rem;
+    background: var(--profile-bg);
+    border-radius: 1rem;
+    position: relative;
+    cursor: pointer;
+}
+.toggle .slider{
+    position: absolute;
+    content: '';
+    top: .15rem;
+    right: .15rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    background: white;
+    border-radius: 50%;
+}
+.active .slider{
+    left: .15rem;
+    margin-right: auto;
 }
 footer{
     font-size: .8rem;
@@ -298,6 +312,32 @@ footer a:hover{
     .container header{
         display: grid;
         grid-template-rows: 1fr auto;
+    }
+    @keyframes fadeFromLeft {
+        0%{
+            opacity: 0;
+            transform: translateX(-50px);
+            -webkit-transform: translateX(-50px);
+            -moz-transform: translateX(-50px);
+            -ms-transform: translateX(-50px);
+            -o-transform: translateX(-50px);
+        }
+        60%{
+            opacity: 0;
+            transform: translateX(-50px);
+            -webkit-transform: translateX(-50px);
+            -moz-transform: translateX(-50px);
+            -ms-transform: translateX(-50px);
+            -o-transform: translateX(-50px);
+        }
+        100%{
+            opacity: 1;
+            transform: translateX(0);
+            -webkit-transform: translateX(0);
+            -moz-transform: translateX(0);
+            -ms-transform: translateX(0);
+            -o-transform: translateX(0);
+        }
     }
     header .profile,
     .nav,
