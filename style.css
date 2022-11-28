@@ -244,11 +244,11 @@ main .card{
     align-items: center;
     gap: 1rem;
 }
-.details__title h3{
+.details__title h2{
     font-size: 1.125rem;
     font-weight: 500;
 }
-.details__time h2{
+.details__time h3{
     font-size: 2rem;
 }
 .details__time p{
@@ -369,7 +369,7 @@ footer a:hover{
     .container main{
         grid-template-columns: repeat(3, minmax(250px, 1fr));
     }
-    .details__time h2{
+    .details__time h3{
         font-size: 3.75rem;
     }
 }
