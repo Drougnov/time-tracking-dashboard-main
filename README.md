@@ -1,6 +1,4 @@
-# 🚧🚧Site On Construction🚧🚧
-
-<!-- # Frontend Mentor - Time tracking dashboard solution
+# Frontend Mentor - Time tracking dashboard solution
 
 This is a solution to the [Time tracking dashboard challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
@@ -16,7 +14,6 @@ This is a solution to the [Time tracking dashboard challenge on Frontend Mentor]
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -29,6 +26,8 @@ Users should be able to:
 - Switch between viewing Daily, Weekly, and Monthly stats
 
 ### Screenshot
+
+![Time tracking dashobard solution's screenshot](./design/desktop-preview.jpg)
 
 ### Links
 
@@ -44,23 +43,27 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
 
 ### What I learned
 
+- How to fetch data and show them
+
+- How to create counter animation
+
 ### Continued development
+
+- Add a theme switcher. ✔️
+- Add counter animation. ✔️
+- Add animated border and background icon. ✔️
+- Add entrance animation. ✔️
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com)
-- [Example resource 2](https://www.example.com)
+- [www.stackoverflow.com](https://stackoverflow.com) - Of course.
+- [Coding Artist(YouTube)](https://youtu.be/FaMW-CtExrs) - Learned the counter animation part from this video
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-## Acknowledgments -->
+- Website - [Rocky Barua](https://rockybarua.netlify.app/)
+- Frontend Mentor - [@Drougnov](https://www.frontendmentor.io/profile/Drougnov)
+- Twitter - [@itz_rocky_barua](https://twitter.com/itz_rocky_barua)
